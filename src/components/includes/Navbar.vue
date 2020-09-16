@@ -18,9 +18,9 @@
                     </div>
                     <div class="lng_dropdown">
                       <select name="countries" class="custome_select">
-                        <option value='en' data-image="assets/images/eng.png" data-title="English">English</option>
-                        <option value='fn' data-image="assets/images/fn.png" data-title="France">France</option>
-                        <option value='us' data-image="assets/images/us.png" data-title="United States">United States</option>
+                        <option value='en' data-image="../../../static/assets/images/eng.png" data-title="English">English</option>
+                        <option value='fn' data-image="../../../static/assets/images/fn.png" data-title="France">France</option>
+                        <option value='us' data-image="../../../static/assets/images/us.png" data-title="United States">United States</option>
                       </select>
                     </div>
                   </div>
@@ -47,16 +47,21 @@
         <div class="row">
           <!--menu start-->
           <div class="col">
-            <nav class="navbar navbar-expand-lg navbar-light position-static"> <a class="navbar-brand logo" href="index.html"> <img class="img-fluid" src="../../../static/assets/images/logo.png" alt=""> </a>
+
+            <nav class="navbar navbar-expand-lg navbar-light position-static">
+             <router-link class="navbar-brand logo" to="/"> <img class="img-fluid" src="../../../static/assets/images/logo.png" alt=""> </router-link>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto mr-auto">
-                  <li class="nav-item"> <a class="nav-link" href="#">Home</a>
+                  <li class="nav-item"> <router-link class="nav-link" to="/">Home</router-link>
+                    
+                  </li>
+                  <li class="nav-item"> <router-link class="nav-link" to="/about-us">About Us</router-link>
                     
                   </li>
                   <li class="nav-item dropdown position-static"> <a class="nav-link dropdown-toggle" href="#">Categories</a>
+
                     <div class="dropdown-menu w-100">
-                      <!-- Tabs -->
                       <div class="container p-0">
                         <div class="row w-100 no-gutters">
                           <div class="col-lg-8 p-lg-3">
@@ -67,7 +72,7 @@
               
                                 <!-- Links -->
                                 <ul class="list-unstyled mb-6 mb-md-0">
-                                  <li> <a href="#">Western Wear</a></li>
+                                  <li> <router-link to="/product-category">Western Wear</router-link></li>
                                   <li> <a href="#">Fitness &amp; Outdoors</a></li>
                                   <li> <a href="#">Ethnic Wear</a></li>
                                   <li> <a href="#">Beach Clothing</a></li>
@@ -137,81 +142,10 @@
                       </div>
                     </div>
                   </li>
-                  <li class="nav-item dropdown position-static"> <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Shop</a>
-                    <div class="dropdown-menu w-100 custom-drop">
-                      <div class="container p-0">
-                        <div class="row w-100 no-gutters">
-                          <div class="col-12 col-md-4 p-lg-3">
-                            <!-- Heading -->
-                            <div class="mb-2 font-w-5 text-link">Shop Layout</div>
-                            <!-- Links -->
-                            <ul class="list-unstyled mb-6 mb-md-0">
-                              <li> <a href="product-grid.html">Product Grid</a> </li>
-                              <li> <a href="product-grid-left-sidebar.html">Product Grid Left Sidebar</a> </li>
-                              <li> <a href="product-grid-right-sidebar.html">Product Grid Right Sidebar</a> </li>
-                              <li> <a href="product-list.html">Product List</a> </li>
-                              <li> <a href="product-list-left-sidebar.html">Product List Left Sidebar</a> </li>
-                              <li> <a href="product-list-right-sidebar.html">Product List Right Sidebar</a> </li>
-
-                            </ul>
-                          </div>
-                          <div class="col-12 col-md-4 p-lg-3">
-                            <!-- Heading -->
-                            <div class="mb-2 font-w-5 text-link">Product Pages</div>
-                            <!-- Links -->
-                            <ul class="list-unstyled mb-6 mb-md-0">
-                              <li> <a href="product-default.html">Product Default</a> </li>
-                              <li> <a href="product-default-right-image.html">Product Default Right Image</a> </li>
-                              <li> <a href="product-left-image.html">Product Left Image</a> </li>
-                              <li> <a href="product-right-image.html">Product Right Image</a> </li>
-                              <li> <a href="product-left-sidebar.html">Product Left Sidebar</a> </li>
-                              <li> <a href="product-right-sidebar.html">Product Right Sidebar</a> </li>
-
-                            </ul>
-                          </div>
-                          <div class="col-12 col-md-4 p-lg-3">
-                            <!-- Heading -->
-                            <div class="mb-2 font-w-5 text-link">Other Pages</div>
-                            <!-- Links -->
-                            <ul class="list-unstyled mb-6 mb-md-0">
-                              <li> <a href="shopping-cart.html">Shopping Cart</a> </li>
-                              <li> <a href="checkout.html">Checkout</a> </li>
-                              <li> <a href="my-account.html">My Account</a> </li>
-                              <li> <a href="wishlist.html">Wishlist</a> </li>
-                              <li> <a href="compare.html">Compare</a> </li>
-                              <li> <a href="order-complete.html">Order Completed</a> </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <li class="nav-item"> <router-link class="nav-link" to="/blog">Blog</router-link>
+                 
                   </li>
-                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Pages</a>
-                    <ul class="dropdown-menu">
-                      <li> <a href="about-us.html">About Us</a> </li>
-                      <li> <a href="login.html">Login</a> </li>
-                      <li> <a href="signup.html">Signup</a> </li>
-                      <li> <a href="forgot-password.html">Forgot Password</a> </li>
-                      <li> <a href="coming-soon.html">Coming Soon</a> </li>
-                      <li> <a href="error-404.html">404 Error</a> </li>
-                      <li> <a href="faq.html">FAQ</a> </li>
-                      <li> <a href="privacy-policy.html">Privacy Policy</a> </li>
-                      <li> <a href="terms-and-conditions.html">Term & Conditions</a> </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Blog</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="blog-grid.html">Blog Grid</a> </li>
-                      <li><a href="blog-grid-left.html">Blog Grid Left</a> </li>
-                      <li><a href="blog-grid-right.html">Blog Grid Right</a> </li>
-                      <li><a href="blog-list-left.html">Blog List Left</a> </li>
-                      <li><a href="blog-list-right.html">Blog List Right</a> </li>
-                       <li><a href="blog-detail.html">Blog Detail</a> </li>
-                       <li><a href="blog-detail-left.html">Blog Detail Left</a> </li>
-                       <li><a href="blog-detail-right.html">Blog Detail Right</a> </li>
-                    </ul>
-                  </li>
-                  <li class="nav-item"> <a class="nav-link" href="contact-us.html">Contact</a> </li>
+                  <li class="nav-item"> <router-link class="nav-link" to="/contact-us">Contact</router-link> </li>
                 </ul>
               </div>
               <div class="right-nav align-items-center d-flex justify-content-end">
@@ -223,12 +157,13 @@
                     </form>
                   </div>
                 </div>
-                <a class="mr-1 mr-sm-3" href="#"><i class="las la-user-alt"></i></a> <a class="mr-3 d-none d-sm-inline" href="#"><i class="lar la-heart"></i></a>
+                <router-link class="mr-1 mr-sm-3" to="/my-account"><i class="las la-user-alt"></i></router-link> 
+                <router-link class="mr-3 d-none d-sm-inline" to="/wishlist"><i class="lar la-heart"></i></router-link>
                 <div class="dropdown cart_dropdown"> <a class="d-flex align-items-center" href="#"> <span class="bg-white pr-2 pl-0 py-1 rounded" data-cart-items="2"> <i class="las la-shopping-bag"></i> </span> </a>
                   <div class="cart_box dropdown-menu dropdown-menu-right">
                     <ul class="cart_list">
-                      <li> <a href="#" class="item_remove"><i class="ion-ios-close-empty"></i></a> <a href="#"><img src="assets/images/product/p8.jpg" alt="cart_thumb1">Unpaired Running Shoes</a> <span class="cart_quantity"> 1 x <span class="cart_amount"> <span class="price_symbole">$</span></span>78.00</span> </li>
-                      <li> <a href="#" class="item_remove"><i class="ion-ios-close-empty"></i></a> <a href="#"><img src="assets/images/product/p12.jpg" alt="cart_thumb2">Unpaired Running Shoes</a> <span class="cart_quantity"> 1 x <span class="cart_amount"> <span class="price_symbole">$</span></span>81.00</span> </li>
+                      <li> <a href="#" class="item_remove"><i class="ion-ios-close-empty"></i></a> <a href="#"><img src="../../../static/assets/images/product/p8.jpg" alt="cart_thumb1">Unpaired Running Shoes</a> <span class="cart_quantity"> 1 x <span class="cart_amount"> <span class="price_symbole">$</span></span>78.00</span> </li>
+                      <li> <a href="#" class="item_remove"><i class="ion-ios-close-empty"></i></a> <a href="#"><img src="../../../static/assets/images/product/p12.jpg" alt="cart_thumb2">Unpaired Running Shoes</a> <span class="cart_quantity"> 1 x <span class="cart_amount"> <span class="price_symbole">$</span></span>81.00</span> </li>
                     </ul>
                     <div class="cart_footer">
                       <p class="cart_total"><strong>Subtotal:</strong> <span class="cart_price"> <span class="price_symbole">$</span></span>159.00</p>
@@ -253,10 +188,11 @@ mounted(){
   $('.custome_select').each( function() {
 $('.custome_select').msDropdown();
 });
+
 }
 }
 </script>
 
 <style>
 
-</style>>
+</style>

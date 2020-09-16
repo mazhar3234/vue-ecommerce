@@ -1,26 +1,6 @@
 <template>
   <div>
-    <section class="bg-light py-6">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <h1 class="h2 mb-0">Contact Us</h1>
-          </div>
-          <div class="col-md-6 mt-3 mt-md-0">
-            <nav aria-label="breadcrumb">
-              <ol class="breadcrumb justify-content-md-end bg-transparent p-0 m-0">
-                <li class="breadcrumb-item"><a class="link-title" href="#">Home</a>
-                </li>
-                <li class="breadcrumb-item"><a class="link-title" href="#">Pages</a></li>
-                <li class="breadcrumb-item active text-primary" aria-current="page">Contact Us</li>
-              </ol>
-            </nav>
-          </div>
-        </div>
-        <!-- / .row -->
-      </div>
-      <!-- / .container -->
-    </section>
+    <top-header></top-header>
     <div class="page-content">
       <section>
         <div class="container">
@@ -103,7 +83,12 @@
 </template>
 
 <script>
-
+  import TopHeader from '../includes/TopHeader.vue'
+  export default {
+   components: {
+    'top-header':TopHeader,
+  }
+  }
 </script>
 
 <style>

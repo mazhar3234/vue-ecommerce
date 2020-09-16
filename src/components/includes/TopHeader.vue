@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-md-6">
-        <h1 class="h2 mb-0">{{ header_title }}</h1>
+        <h1 class="h2 mb-0">Header Title</h1>
       </div>
       <div class="col-md-6  mt-3 mt-md-0">
 <nav aria-label="breadcrumb">
